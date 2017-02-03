@@ -10,19 +10,23 @@
     cin >> futureYears;
     
     int currentPop = 32447297;
-    int loses = (11 + 29); // seconds 2 people that either died or move out
-    int gain = (11 + 15);
+    int loses = 11;
+    int migrant= 29; // seconds 2 people that either died or move out
+    int gain = 8;
+    int netGain = 15;
     
-    int secYears = 365 * 86400;  //second per year
+    int secYears = 365 * 86400;  //second per year  
     
     int yearLost = secYears / loses; // people that are lost in one year 
+    int yearMigrant = secYears / migrant;
     int yearGain = secYears / gain; // people that are gain in one year 
+    int yearNetGain = secYears/ netGain; 
     
     int totalLost = 0;
-        totalLost = futureYears * yearLost;
+        totalLost = futureYears * (yearLost + yearMigrant);
         
     int totalGain = 0;
-        totalGain = futureYears * yearGain; 
+        totalGain = futureYears * (yearGain + yearNetGain); 
     
     int futurePop= 0;
         futurePop = (currentPop - totalLost) + totalGain;
