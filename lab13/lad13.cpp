@@ -1,4 +1,5 @@
  //leslie Crispin 
+ //lab 1.3: Intergers
  //2-2-17
  
   #include <iostream> 
@@ -13,20 +14,25 @@
     int loses = 11;
     int migrant= 29; // seconds 2 people that either died or move out
     int gain = 8;
-    int netGain = 15;
+ 
+    int secondsInHr= 0;
+        secondsInHr = 60 * 60;
+    int secondsInDay = 0;
+        secondsInDay = 24 * secondsInHr;
     
-    int secYears = 365 * 86400;  //second per year  
+    int secYears = 0;
+        secYears = 365 * secondsInDay;  //second per year  
     
     int yearLost = secYears / loses; // people that are lost in one year 
     int yearMigrant = secYears / migrant;
     int yearGain = secYears / gain; // people that are gain in one year 
-    int yearNetGain = secYears/ netGain; 
+   
     
     int totalLost = 0;
         totalLost = futureYears * (yearLost + yearMigrant);
         
     int totalGain = 0;
-        totalGain = futureYears * (yearGain + yearNetGain); 
+        totalGain = futureYears * yearGain; 
     
     int futurePop= 0;
         futurePop = (currentPop - totalLost) + totalGain;
