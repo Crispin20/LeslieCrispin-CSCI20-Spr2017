@@ -1,3 +1,6 @@
+// Leslie Crispin
+// lab 1.6 Objects
+// 2-16-17
 #include <iostream> 
 #include <string>
 using namespace std;
