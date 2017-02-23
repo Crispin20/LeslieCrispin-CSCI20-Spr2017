@@ -1,5 +1,5 @@
 // Leslie Crispin 
-// 1.0 assignment - calculators
+// 1.0 assignment - calculators,  calculate the employees net pay and gross wage based on the hours worked and salary, ending with a wage silp.
 // 2-16-17
 
 #include <iostream>
@@ -8,9 +8,9 @@ using namespace std;
 
 struct EmployeeInfo {
     
-    string employee_name;
-    double hours_Work;
-    double pay_rate;
+    string employee_name; // enployee name 
+    double hours_Work; // hours the employee worked
+    double pay_rate; // how they are paid per hour 
     
 };
 
@@ -38,11 +38,11 @@ int main(){
     double taxesTaken = 0;
         taxesTaken = gross_Rate * wageTax ;
         
-    double netpay = 0;
-        netpay= (gross_Rate - taxesTaken) - healthInsurance;
+    double netpay = 0; // from the gross rate subtract the insurance and taxes
+        netpay= (gross_Rate - healthInsurance) - taxesTaken;
         
-    cout << "Employee Name: "<< weeklyWage.employee_name << endl << "Hours worked: " << weeklyWage.hours_Work << endl << "Pay Rate: ";
-    cout << weeklyWage.pay_rate << endl << "Gross Rate: " << gross_Rate << endl << "Net pay: " << netpay;
+    cout << endl << endl << "Employee Name: "<< weeklyWage.employee_name << endl << "Hours worked: " << weeklyWage.hours_Work << endl << "Pay Rate: $";
+    cout << weeklyWage.pay_rate << endl << "Gross Rate: $" << gross_Rate << endl << "Net pay: $" << netpay;
    
     
     
