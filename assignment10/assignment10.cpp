@@ -6,7 +6,7 @@
 #include <string>
 using namespace std;
 
-struct EmployeeInfo {
+struct EmployeeInfo { 
     
     string employee_name; // enployee name 
     double hours_Work; // hours the employee worked
