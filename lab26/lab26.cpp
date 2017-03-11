@@ -37,14 +37,13 @@ class TemperatureConverter{
     
     void TemperatureConverter::SetTempFromCelsius(double celsius){
         kelvin_ = celsius;
-        double kelvinFormula = 0.0;
-            kelvinFormula = (celsius + 278.15);
+        
+            kelvin_ = (celsius + 278.15);
 
     }
     void TemperatureConverter::SetTempFromFahrenheit(double fehrenheit){
         kelvin_ = fehrenheit;
-        int fehrenheitconve = 0.0;
-            fehrenheitconve = ((5 * (fehrenheit - 32) /9 ) + 273.15);
+            kelvin_ = ((5 * (fehrenheit - 32) /9 ) + 273.15);
     }
     double TemperatureConverter::GetTempFromKelvin() const {
         
@@ -55,12 +54,12 @@ class TemperatureConverter{
     }
     double TemperatureConverter::GetTempAsFahrenheit() const {
         
-        return (( SetTempFromCelsius() * 9)/5 + 32);
+        return ((kelvin_ * 9)/5 + 32);
         
     }
     
     void TemperatureConverter::PrintTemperatures() const {
-        cout << "Kelvin: " << kelvin_ << endl << "Fahrenheit: " << TemperatureConverter::GetTempAsFahrenheit() << endl << "Celsius: " << TemperatureConverter::GetTempAsCelsius()  << endl;
+        cout << "Kelvin: " << TemperatureConverter::GetTempFromKelvin() << endl << "Fahrenheit: " << TemperatureConverter::GetTempAsFahrenheit() << endl << "Celsius: " << TemperatureConverter::GetTempAsCelsius()  << endl;
         return;
     }
     
