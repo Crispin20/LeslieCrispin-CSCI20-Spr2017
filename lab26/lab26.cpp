@@ -1,3 +1,6 @@
+// Leslie Crispin  
+// 3-9-17
+//lab 2.6:  it form the kelvin variable it calculates the kelvin temp, celsius and fehren
 #include <iostream>
 using namespace std;
 
@@ -48,7 +51,7 @@ class TemperatureConverter{
         return kelvin_;
     }
     double TemperatureConverter::GetTempAsCelsius() const {
-        return (kelvin_ - 273.15);
+       return (kelvin_ - 273.15);
     }
     double TemperatureConverter::GetTempAsFahrenheit() const {
         
