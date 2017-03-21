@@ -7,10 +7,10 @@ using namespace std;
 
 class ConvertMoney{
   public:
-     void SetDollar(double convertDollar); 
-     void SetEuros(double convertEuros);
-     void SetBitcoin(double convertBitcoin);
-     void SetYuan(double convertYaun);
+     void SetDollar(double convertDollar, char letter); 
+     void SetEuros(double convertEuros, char letter);
+     void SetBitcoin(double convertBitcoin, char letter);
+     void SetYuan(double convertYaun, char letter);
      
      double GetDollar() const;
      double GetEuros() const;
@@ -22,7 +22,7 @@ class ConvertMoney{
     
     void PrintMoney() const;
   private: 
-    double money_ = 0.00;
+    double money_;
 };
 
  ConvertMoney::ConvertMoney() {       //defult constructor
@@ -34,14 +34,9 @@ class ConvertMoney{
         return;
     }  
     
- void ConvertMoney::SetDollar(double convertDollar){  // function converts dollar to what is desired
+ void ConvertMoney::SetDollar(double convertDollar, char letter){  // function converts dollar to what is desired
      money_ = convertDollar;
      
-      char letter;
-     
-     cout << "What do you want to convert it to?  Enter A for dollar, B for euros, C for bitcoin, D for yuan: ";
-     cin >> letter;
-       
         if( letter == 'A') { // dallor to dollar 
           
             money_  = (convertDollar * 1);
@@ -65,11 +60,9 @@ class ConvertMoney{
         }
  
 
- void ConvertMoney::SetEuros(double convertEuros){  // converts to  euros 
+ void ConvertMoney::SetEuros(double convertEuros, char letter){  // converts to  euros 
      money_ = convertEuros;
-     char letter;
-     cout << "What do you want to convert it to?  Enter A for dollar, B for euros, C for bitcoin, D for yuan: ";
-     cin >> letter;
+   
        
         if( letter == 'A') { // euros to dollar 
            
@@ -86,11 +79,9 @@ class ConvertMoney{
         }
  }
 
- void ConvertMoney::SetBitcoin(double convertBitcoin){  // coverts bitcoin 
+ void ConvertMoney::SetBitcoin(double convertBitcoin, char letter){  // coverts bitcoin 
      money_ = convertBitcoin;
-     char letter;
-     cout << "What do you want to convert it to?  Enter A for dollar, B for euros, C for bitcoin, D for yuan: ";
-     cin >> letter;
+     
        
         if( letter == 'A') {   // bitcoin to dollar 
             money_ = (convertBitcoin * 1174.02);  
@@ -106,11 +97,9 @@ class ConvertMoney{
         }
  }
  
-  void ConvertMoney::SetYuan(double convertYuan){  // converts yuan 
+  void ConvertMoney::SetYuan(double convertYuan, char letter){  // converts yuan 
      money_ = convertYuan;
-     char letter;
-     cout << "What do you want to convert it to?  Enter A for dollar, B for euros, C for bitcoin, D for yuan: ";
-     cin >> letter;
+     
        
         if( letter == 'A') { // yuan to dollar 
             money_ = (convertYuan * .14);
@@ -158,33 +147,56 @@ cin >> letterChoice;
     
    
     if (letterChoice == 'A'){  // if user choose dollar 
+       
         double conDollar = 0.00;
+        char letter;
+        
         cout << "How much is it? $";
         cin >> conDollar;
-     
-        convert.SetDollar(conDollar);   
+        
+     cout << "What do you want to convert it to?  Enter A for dollar, B for euros, C for bitcoin, D for yuan: ";
+     cin >> letter;
+       
+        convert.SetDollar(conDollar, letter);   
          ConvertMoney();
     }
     else if (letterChoice == 'B'){  // if user choose euros 
         double conEuros = 0.00;
+        char letter;
         cout << "How much is it? $";
         cin >> conEuros; 
         
-        convert.SetEuros(conEuros);
-         ConvertMoney();
+        cout << "What do you want to convert it to?  Enter A for dollar, B for euros, C for bitcoin, D for yuan: ";
+        cin >> letter;
+     
+        convert.SetEuros(conEuros, letter);
+        ConvertMoney();
     }
     else if (letterChoice == 'C'){  // if user choose bitcoins 
         double conBitcoin = 0.00;
+        char letter;
+        
         cout << "How much is it? $";
         cin >> conBitcoin;
-        convert.SetBitcoin(conBitcoin);
+        
+        cout << "What do you want to convert it to?  Enter A for dollar, B for euros, C for bitcoin, D for yuan: ";
+        cin >> letter;
+        
+        convert.SetBitcoin(conBitcoin, letter);
          ConvertMoney();
     }
     else if (letterChoice == 'D'){  // if user choose yuan
         double conYuan = 0.00;
+        char letter;
+        
         cout << "How much is it? $";
         cin >> conYuan;
-        convert.SetYuan(conYuan);
+        
+        
+        cout << "What do you want to convert it to?  Enter A for dollar, B for euros, C for bitcoin, D for yuan: ";
+        cin >> letter;
+        
+        convert.SetYuan(conYuan, letter);
          ConvertMoney();
         
     }
