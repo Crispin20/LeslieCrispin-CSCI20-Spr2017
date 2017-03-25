@@ -11,15 +11,7 @@ int main(){
     cout << "What kind of device do you want?  A) DumbPhone, B) Smart Phone, C) Tablet D) More than one kind" << endl;
     cin >> deviceChoice;
   
-    
-    
-    
-    char corpMember;
-    cout << "Are you a Corporate Member? A) yes or B) No"  << endl;
-    cin >> corpMember;
-    
-    
-   
+
    
     if ( deviceChoice == ('A' || 'a')){ //device: dumb phone
       int dumbPhone = 0; //price 
@@ -78,14 +70,14 @@ int main(){
       
         int deviceTotal = 0;
         deviceTotal = deviceAmount * tablet;
-        cout << "Device charge for dumb phone(s) is : $" << deviceAmount;
+        cout << "Device charge for dumb phone(s) is : $" << deviceAmount << endl;
       
            if (deviceAmount <= 2) {
               int FamilyPlan = 3;
               int familyTotal = 0;
         
               familyTotal = deviceAmount * 3; 
-              cout << "Your familyplan discount for " <<deviceTotal << " dumbPhones is $" << familyTotal;
+              cout << "Your familyplan discount for " <<deviceTotal << " dumbPhones is $" << familyTotal << endl;
         
               }
         
@@ -117,15 +109,15 @@ int main(){
         cin >> totalTablet;
         
       
-       
+     
        deviceTotal = (totalTablet * tablet) + (smartPhone * totalSPhone) + (totalDPhone * dumbPhone);
-       cout << "Device charge is $" << deviceTotal;
+       cout << "Device charge is $" << deviceTotal << endl;
       
         if ((totalSPhone + dumbPhone) <= 2) {
           int FamilyPlan = 3;
           int familyTotal = 0;
           familyTotal = (totalSPhone + dumbPhone)  * 3; 
-          cout << "Your have a familyplan discount for $" << familyTotal;
+          cout << "Your have a familyplan discount for $" << familyTotal << endl;
         }
        else {
          cout << "No need for a Family Plan " << endl;
@@ -135,20 +127,53 @@ int main(){
      
      else{
        
-       cout << "No device selected";
+       cout << "No device selected" << endl;
      }
      
      
  
-       char planChoice;
-       cout << "Do you want Monthly Charge(with out data), Unlimited Data or Pay-per Data?  choose A) Monthly Charge, B) unlimited or C) Pay-per Data" << endl;
+       int planChoice;
+       cout << "How much data are you planing to use?" << endl;
        cin >> planChoice;
        
-      if (planChoice == ('A' || 'a')){  //monthly charge 
-         int planTotal = 0;
-         int monthlyTotal = 30; 
-          planTotal = DumbPhone + monthlyTotal;
-       
+     if (planChoice <= 0) {
+         
+        char dataChoice;
+        cout << "What type of plan would you like?"  << endl << "A) unlimited data, " << endl << "or B) pay per data charge, $5 for the first GB of data and $0.75 after that";
+        cin >> dataChoice;
+        
+            if( dataChoice == ('A' || 'a')) {
+            
+             cout << "Your plan is Unlimited data for data up to 10GB and $1.50 after that and unlimited talk and text. For $30" << endl;
+            
+            }
+            
+            else if ( dataChoice == ('B' || 'b') ){
+                
+                cout << "Your plan is Pay per Data, $5 for the frist GB of data and $0.75 for each GB after that up to 10GB and $1.50 at to 15GB";
+            }
+            else {
+                cout << "No type selected." << endl;
+            }
+           
+        }
+        else { 
+         cout << "Your plan should be a monthly charge of $30." << endl;
       }
-     
+    
+    char corpMember;
+    cout << "Are you a Corporate Member? A) yes or B) No"  << endl;
+    cin >> corpMember;
+    if ( corpMember == ('a' || 'A')){
+        
+        cout << "you get a 10 percent discount" << endl;
+    }
+    else if (corpMember == ('B' || 'b')){
+        cout << "You dont get a discount." <<endl;
+    }
+    else {
+        cout << "None Selected" <<endl;
+        
+    }
+     return 0;
 }
