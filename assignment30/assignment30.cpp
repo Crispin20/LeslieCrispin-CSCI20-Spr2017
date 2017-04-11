@@ -333,10 +333,7 @@ cout << endl <<  "What do you choose:  1) Rock, 2) Paper, 3) Scissors, 4) Lizzar
     else{
     //cout << "unvalid answer";
  }
- 
-  
-    
-  
+
 }   
      cout << endl <<  "Your score is: " <<  winner.Points();
     
