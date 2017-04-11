@@ -207,7 +207,7 @@ int main(){
     
     
 
-    cout << endl << endl << "Book one: "  << book1 << ", Author: " << author1 << ", CopyRight year: " << copyRight1 << ", Genre: " << genre1 << ", Age Group: " << ageGroup1;
+    cout << endl << endl << "Book one: "  << bookTitleName << ", Author: " << author1 << ", CopyRight year: " << copyRight1 << ", Genre: " << genre1 << ", Age Group: " << ageGroup1;
     cout << endl << endl << "Book two: "  << book2 << ", Author: " << author2 << ", CopyRight year: " << copyRight2 << ", Genre: " << genre2 << ", Age Group: " << ageGroup2;
     cout << endl << endl << "Book three: "  << book3 << ", Author: " << author3 << ", CopyRight year: " << copyRight3 << ", Genre: " << genre3 << ", Age Group: " << ageGroup3;
     cout << endl << endl << "Book four: "  << book4 << ", Author: " << author4 << ", CopyRight year: " << copyRight4 << ", Genre: " << genre4 << ", Age Group: " << ageGroup4;
