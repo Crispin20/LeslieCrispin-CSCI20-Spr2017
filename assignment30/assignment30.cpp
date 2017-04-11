@@ -1,14 +1,14 @@
 #include <iostream>
 //Leslie Crispin 
 // 4-6-17
-//
+// Game of rock paper scissors that user plays against the computer. the score of the user is scored at the end 
 
 
 using namespace std;
 #include<cstdlib>
 #include<ctime>
 
-class DetermineWinner{
+class DetermineWinner{   // classes determined the score
     public:
     void SetRock(int compChoice, int sum);
     void SetPaper(int compChoice, int sum);
@@ -42,7 +42,7 @@ DetermineWinner::DetermineWinner(int score_){
         return;
     }
 
-void DetermineWinner::SetRock(int compChoice, int sum){  
+void DetermineWinner::SetRock(int compChoice, int sum){ // rock 
      int num  = 0; // point
     
     if(compChoice == 1){ // its a tie
@@ -63,7 +63,7 @@ void DetermineWinner::SetRock(int compChoice, int sum){
       score_ = num + sum;
  }
 
-void DetermineWinner::SetPaper(int compChoice, int sum ){
+void DetermineWinner::SetPaper(int compChoice, int sum ){ //paper
      int num = 0;
      
     if(compChoice == 1){//Paper Covers Rock
@@ -84,7 +84,7 @@ void DetermineWinner::SetPaper(int compChoice, int sum ){
     score_ = num + sum; 
  }
  
-void DetermineWinner::SetScissors(int compChoice, int sum){
+void DetermineWinner::SetScissors(int compChoice, int sum){ // scissors
     int num = 0;
           
     if (compChoice == 1){ //Rock crushes Scissors
@@ -125,7 +125,7 @@ void DetermineWinner::SetLizzard(int compChoice, int sum){// lizzard
     score_ = sum +  num;
 }
 
-void DetermineWinner::SetSpock(int compChoice, int sum){
+void DetermineWinner::SetSpock(int compChoice, int sum){ //spock
     int num = 0;
     
     if(compChoice == 1){ //Spock vaportizes Rock
@@ -189,7 +189,7 @@ i = i + 1;
 
 
 
-sum = winner.Points(); 
+sum = winner.Points();  //score is turns into the sum
 int userChoice = 0;
 cout << endl <<  "What do you choose:  1) Rock, 2) Paper, 3) Scissors, 4) Lizzard, 5) Spock" << endl;
     cin >> userChoice;
@@ -336,25 +336,9 @@ cout << endl <<  "What do you choose:  1) Rock, 2) Paper, 3) Scissors, 4) Lizzar
  
   
     
-    // FIXME:: ENTER THE calfunction that call function that calls the SCORE!!!! GET HERE ALL OF IT,  THEORITICLLY HERE IT'S GOING TO PRODUCE THE THE 
+  
 }   
      cout << endl <<  "Your score is: " <<  winner.Points();
     
     return 0;
 }
-/***   
-    if(compChoice == 1 ){ // rock
-    cout << "";
-    }
-    else if (compChoice == 2){// paper
-    }
-    else if (compChoice == 3) { // scissors
-    } 
-    else if (compChoice == 4) { // lizard
-    }
-    else if (compChoice == 5) { // spock 
-    }
-    else{
-      cout << "unvalid answer";
-        
-    }**/
