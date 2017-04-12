@@ -16,10 +16,10 @@
 
 class ArrayTools{
     public:
-    void SetPrint();
+    void SetPrint(int size1, int size2);
     void SetFind_min(int size1, int size2);
     void SetFind_max(int size1, int size2);
-    void SetFind_sum();
+    void SetFind_sum(int SIZE);
     void SetNum_evenOrOdd();
     void SetSearch();
     void SetIs_sorted();
@@ -44,12 +44,12 @@ void ArrayTools::SetPrint(int size1, int size2 ){
 void ArrayTools::SetFind_min(int size1, int size2){
    if(size1 < size2){
     size1 = single_;    
-        
-    }
-    else{
-    size2 = single_;
+}
+    else {
+        size2= single_;
     }
 }
+
 void ArrayTools::SetFind_max(int size1, int size2){
       if(size1 > size2){
     size1 = single_;    
@@ -61,7 +61,12 @@ void ArrayTools::SetFind_max(int size1, int size2){
 }
 void ArrayTools::SetFind_sum(int SIZE){
     int sum = 0;
-    for(){}
+    int num = 0;
+     while (SIZE >= 0) {             
+             
+        sum = sum + num;
+        
+       }
 }
     
 
@@ -79,7 +84,7 @@ void ArrayTools::SetFind_sum(int SIZE){
     values[9] = 100;***/
     
     
-}
+
 
 int main(){
     const int SIZE = 10;
