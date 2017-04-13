@@ -13,6 +13,7 @@
     Is_sorted – check to see of the array is sorted in ascending order.
 ***/
 #include<iostream>
+using namespace std; 
 
 class ArrayTools{
     public:
