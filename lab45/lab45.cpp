@@ -1,10 +1,9 @@
 //Leslie Crispin
 //4-25-17
-/*This program is responsible for creating user names for a new website you have created. 
-It should accept a first name of up to 10 characters and a last name of up to 20 characters. 
+/*This program is creates user names having user input a first name of up to 10 characters and a last name of up to 20 characters. 
 It should tell the user if the name is larger than the max size.  It should also determine
 if the names are the same and output a warning.  After checking these things, it should 
-create three different user name options (for example: apbrowne; aprilbrowne; abrowne).*/
+create three different user name options*/
 
 #include <iostream>
 #include <string>
