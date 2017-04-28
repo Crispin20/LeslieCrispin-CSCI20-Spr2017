@@ -48,7 +48,7 @@ if(!inFS.is_open()){
     overallGPA = (average + currentGPA) / 2;  //overall GPA
     //cout << fixed << setprecision(2) << overallGPA;
     
-    outFS.open("GPA.html");
+    outFS.open("GPA.html", ofstream::app);
     
     if(!outFS.is_open()){
     cout << "Could not open file GPA.html" << endl;
@@ -56,8 +56,9 @@ if(!inFS.is_open()){
     }
 
 
-    outFS <<"Student: " << name << endl << "Semester: " <<semester << endl;
-    outFS << "Semester " << semester << " GPA: " << average << endl;
+    outFS << "Student: " << name <<";"<< endl;
+    outFS << "Semester: " <<semester <<";"<< endl;
+    outFS << "Semester " << semester << " GPA: " << average <<";"<< endl;
     outFS << "Overall GPA: " << overallGPA << endl;
     
     outFS.close();  
