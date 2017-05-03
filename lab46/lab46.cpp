@@ -30,6 +30,8 @@ if(!inFS.is_open()){
         cout << "cound not open file " << fileName << endl;
         return 1;
      }
+   
+   do()while{}
     inFS >> name;
     inFS >> semester;
     inFS >> grade1; 
@@ -39,16 +41,17 @@ if(!inFS.is_open()){
     inFS >> totalUnits;
     inFS >> currentGPA;
     
-    inFS.close();
-    //cout << "Semester: " << semester << endl;
+    
+    
     totalPoints = grade1 + grade2 + grade3 + grade4;
     average = ((totalPoints)/4);  //semester gpa
-    //cout << fixed <<  setprecision(2) <<  average << endl; 
+    
     
     overallGPA = (average + currentGPA) / 2;  //overall GPA
-    //cout << fixed << setprecision(2) << overallGPA;
+    
     
     outFS.open("GPA.html", ofstream::app);
+    
     
     if(!outFS.is_open()){
     cout << "Could not open file GPA.html" << endl;
@@ -62,6 +65,6 @@ if(!inFS.is_open()){
     outFS << "Overall GPA: " << overallGPA << endl;
     
     outFS.close();  
-  
+  inFS.close();
    return 0;
 }

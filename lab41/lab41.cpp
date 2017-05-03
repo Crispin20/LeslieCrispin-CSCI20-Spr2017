@@ -17,8 +17,16 @@ using namespace std;
 
 class ArrayTools{
     public:
-    void SetPrint(int size1, int size2);
-    void SetFind_min(int size1, int size2);
+    void SetPrint( int size1, int size2);
+   
+    void SetFind_min(int size1, int size2){
+   if(size1 < size2){
+    size1 = single_;    
+}
+    else {
+        size2= single_;
+    }
+}
     void SetFind_max(int size1, int size2);
     void SetFind_sum(int SIZE);
     void SetNum_evenOrOdd();
@@ -42,14 +50,7 @@ void ArrayTools::SetPrint(int size1, int size2 ){
     
 }
 
-void ArrayTools::SetFind_min(int size1, int size2){
-   if(size1 < size2){
-    size1 = single_;    
-}
-    else {
-        size2= single_;
-    }
-}
+
 
 void ArrayTools::SetFind_max(int size1, int size2){
       if(size1 > size2){
@@ -72,18 +73,7 @@ void ArrayTools::SetFind_sum(int SIZE){
     
 
     
-    /***int values = [10];
-    values[0] = 10;
-    values[1] = 20;
-    Values[2] = 30;
-    values[3] = 40;
-    values[4] = 50;
-    values[5] = 60;
-    values[6] = 70;
-    values[7] = 80;
-    values[8] = 90;
-    values[9] = 100;***/
-    
+
     
 
 
