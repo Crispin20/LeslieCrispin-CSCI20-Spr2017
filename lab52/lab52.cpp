@@ -5,9 +5,12 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include "lab52.h"
+#include <iosteam>
+
 using namespace std;
 
-#include "lab52.h"
+
 
 int main(){
     

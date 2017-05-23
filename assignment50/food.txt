@@ -1,0 +1,12 @@
+Chowder 
+10
+Pizza
+5
+Hanburger
+7
+Fries 
+3
+Hotdog
+3
+Chicken
+5

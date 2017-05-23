@@ -1,7 +1,10 @@
+#include "lab52.h"
+
+#include <ctime>
 #include <iostream>
 using namespace std; 
 
-#include "lab52.h"
+
 
 MyClass::MyClass() : num_(0) {}
 
@@ -17,8 +20,8 @@ int MyClass::GetNumber(){
    return num_;
 }
 
-
 int randomNumber(){
    srand(time(0));
+   
    return (rand()% 10) + 1);
 }
