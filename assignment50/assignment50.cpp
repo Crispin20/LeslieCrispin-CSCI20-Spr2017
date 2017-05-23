@@ -2,6 +2,7 @@
 #include <string>
 #include <iomanip>
 #include <cstdlib>
+#include <fstream>
 using namespace std;
 class Restaurant
 {
@@ -69,6 +70,15 @@ Restaurant::Restaurant(double total_, double taxtotal_, double totalTip_){
 	}
 	
 	void Restaurant::Print() const{
+		ofstream inFS; // following out put to food.txt
+		inFS.open("food.txt"); 
+		inFS << "      Food Total" << endl;
+		inFS << "Food Price Total: " << fixed <<setprecision(2)<< total_ << endl;
+		inFS << "Food Tax: " << fixed << setprecision(2) <<taxtotal_ << endl;
+		inFS << "Tip Total: "  << fixed <<setprecision(2) <<totalTip_ << endl;
+		inFS << "Price Total: " << fixed << setprecision(2) << total_ + taxtotal_ + totalTip_ << endl; 
+		inFS.close();
+		
 		cout << "      Food Total" << endl;
 		cout << "Food Price Total: " << fixed <<setprecision(2)<< total_ << endl;
 		cout << "Food Tax: " << fixed << setprecision(2) <<taxtotal_ << endl;
@@ -80,9 +90,9 @@ Restaurant::Restaurant(double total_, double taxtotal_, double totalTip_){
 
 int main(){
 Restaurant price;
-
+		
 		string dish[10];
-		int foodPrice[10];
+		double foodPrice[10];
 		int num = 0;
 		int sum = 0;
 		double cost = 0;
@@ -93,7 +103,6 @@ cout<<"Enter number of dishes (<=10): ";
 			//istead add the file input and as the disshes 
 		for (int i = 0; i <= num - 1; i++){  //-1 bc of the index
 		
-			cout<<"Enter name of and price: " << endl;
 			cout << "Name: ";
 			cin>> dish[i];
 			cout << "foodPrice: ";
@@ -109,14 +118,14 @@ cout<<"Enter number of dishes (<=10): ";
 				}
 			cout<<endl;
 	
+	
+	
 	for (int i=0; i<=num; i++){
-				cout << dish[i]<<" "<<"price is "<< fixed<< setprecision(2)<<foodPrice[i]<<endl;		
+				cout << dish[i]<<" "<<"price is "<< fixed<< setprecision(2)<<foodPrice[i]<<endl;
 		}		
 	cout << endl;
 	
-	
-	price.Print();	
-	
+	price.Print();
 
 	return 0;
 }

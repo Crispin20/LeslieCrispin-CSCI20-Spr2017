@@ -1,12 +1,5 @@
-Chowder 
-10
-Pizza
-5
-Hanburger
-7
-Fries 
-3
-Hotdog
-3
-Chicken
-5
+      Food Total
+Food Price Total: 20.00
+Food Tax: 1.45
+Tip Total: 3.00
+Price Total: 24.45
