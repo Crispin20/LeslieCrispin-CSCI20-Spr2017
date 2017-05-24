@@ -1,3 +1,10 @@
+//Leslie Crispin
+//5-23-17
+// Program accepts user input for dishes and price, inputs it into arrays
+//and it sends info int the class and out put the tip, taxes, food total,
+//and total price and also outputs it into a file
+
+
 #include <iostream>
 #include <string>
 #include <iomanip>
@@ -107,7 +114,10 @@ cout<<"Enter number of dishes (<=10): ";
 			cin>> dish[i];
 			cout << "foodPrice: ";
 			cin >> foodPrice[i];
-			
+				if (foodPrice[i] == 0){
+				cout << "Invalid";
+				return 0;
+			}
 		sum = foodPrice[i]+ sum;
 			
 			
@@ -115,7 +125,7 @@ cout<<"Enter number of dishes (<=10): ";
 		price.SetCalculatedTaxes();
 		price.SetCalculatedTip();
 		
-				}
+			}
 			cout<<endl;
 	
 	
